@@ -5,10 +5,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Experiência</title>
+    <link rel="icon" type="image/x-icon" href="Imagens/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2% 0;
+            background-color: #89D4FF;
+            font-family: "Aldrich", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        main {
+            background-color: azure;
+            border-radius: 20px;
+            padding: 20px 40px;
+        }
+
+        h1,
+        h2 {
+            color: rgb(140, 76, 8);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        section {
+            margin-top: 0px;
+            padding-bottom: 5px;
+            border-bottom: solid 1px gray;
+
+        }
+
+        .tabela-bonita {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            box-shadow: 0 0 20px rgba(51, 54, 247, 0.678);
+        }
+
+        .tabela-bonita thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .tabela-bonita th,
+        .tabela-bonita td {
+            padding: 12px 25px;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .tabela-bonita tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+
+        .tabela-bonita tbody tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+
+        .empresas {
+            display: flex;
+            margin: 20px 0px;
+        }
+
+        .empresas figure {
+            border: thin #c0c0c0 solid;
+            display: flex;
+            flex-flow: column;
+            padding: 5px;
+            max-width: 220px;
+            margin: auto;
+            transition: 555ms;
+            transition: 555ms;
+            transform: translateX(0px) scale(1.0);
+            filter: grayscale();
+        }
+
+        .empresas figure:hover {
+            transform: scale(1.01);
+            box-shadow: 5px 5px 10px black;
+            filter: none;
+        }
+
+        .empresas img {
+            width: 220px;
+            height: 130px;
+        }
+
+        .empresas figcaption {
+            background-color: #222;
+            color: #fff;
+            font: italic smaller sans-serif;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .videoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .home{
+            width:45px;
+            height:45px;
+            position:fixed;
+            top:30px;
+            left:40px;
+            text-align:center;
+            transition: 0.5s;
+            content: url(Imagens/home.png);
+        }
+
+        .home:hover{
+            content:url(Imagens/homeAfter.png);
+        }
+
+
+    </style>
+
 </head>
 
 <body>
-    
+    <a href="index.html"><div class="home"></div></a>
+    <main>
+        <section>
+            <h1 style="text-align: center;">Minhas experiências convertidas em habilidades corporativas</h1>
+            <table class="tabela-bonita">
+                <thead>
+                    <tr>
+                        <th>Experiência em Cybertron</th>
+                        <th>Habilidade corporativa resultante</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Comandar defesa em Iacon</td>
+                        <td>Gestão de Crises e Liderança de Equipes</td>
+                    </tr>
+                    <tr>
+                        <td>Decifrar transmissões Decepticon</td>
+                        <td>Análise de Inteligência e Segurança de Dados</td>
+                    </tr>
+                    <tr>
+                        <td>Manutenção de Centelhas (Sparks)</td>
+                        <td>Gestão de Recursos Humanos e Empatia</td>
+                    </tr>
+                    <tr>
+                        <td>Recuperação de Memória de Unidades Danificadas</td>
+                        <td>Backup de dados críticos, restauração de sistemas complexos e integridade de hardware.</td>
+                    </tr>
+                    <tr>
+                        <td>Comando da Guarda da Ponte Espacial</td>
+                        <td>Monitoramento de fluxo internacional, conformidade com protocolos de segurança e gestão de
+                            acessos.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Empresas que eu trabalhei</h2>
+            <div class="empresas">
+
+                    <figure>
+                        <a href="https://www.sentinelone.com/" target="_blank">
+                        <img src="Imagens/Empresa1.jpg" alt=""></a>
+                        <figcaption>QG dos autobots</figcaption>
+                    </figure>
+
+                    <figure>
+                        <a href="https://www.tempus.com/" target="_blank">
+                        <img src="Imagens/Empresa2.jpg" alt=""></a>
+                        <figcaption>Zonamento de Cybertron</figcaption>
+                    </figure>
+                
+
+                    <figure>
+                        <a href="https://www.assai.com.br/" target="_blank">
+                        <img src="Imagens/Empresa3.jpg" alt=""></a>
+                        <figcaption>Assaí Atacadista</figcaption>
+                    </figure>
+
+
+            </div>
+        </section>
+
+        <section class="video">
+            <div class="videoContainer">
+                <h2>Um pouco de como eu cheguei na terra:</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fa6BVHdzrjQ?si=1cHGAJS3P4MNPEWp"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
 </body>
 
 </html>
