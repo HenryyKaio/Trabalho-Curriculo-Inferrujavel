@@ -8,11 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Imagens/Logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <style>
         * {
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -71,22 +77,102 @@
         .secaoContato {
             display: flex;
             margin-left: 10px;
-            margin-top:20px;
+            margin-top: 20px;
         }
 
-        .secaoContato p{
+        .secaoContato p {
             margin-left: -15px;
         }
 
-        .secaoContato img{
-            width:32px;
-            height:32px;
+        .secaoContato img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .home {
+            width: 45px;
+            height: 45px;
+            position: fixed;
+            top: 30px;
+            left: 40px;
+            font-size: 35px;
+            text-align: center;
+            transition: 0.5s;
+            content: url(Imagens/home.png);
+        }
+
+        .home:hover {
+            content: url(Imagens/homeAfter.png);
+        }
+
+        /* Configuração básica */
+        .nav,
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size:20px;
+        }
+
+        .nav li {
+            position: relative;
+            /* Pai precisa ser relative */
+            margin: 20px;
+            top:-20px;
+        }
+
+        .nav a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* Esconder submenu por padrão */
+        .submenu {
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            /* Transição suave */
+            position: absolute;
+            top: 0px;
+            left: 0;
+            /* Move o submenu para o lado direito do pai */
+            min-width: 150px;
+        }
+
+        /* Mostrar submenu no hover */
+        .dropright:hover  .submenu {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            left: 10%;
         }
     </style>
 
 </head>
 
 <body>
+    <a href="#top">
+        <div class="home"></div>
+    </a>
+    <div class="menu">
+        <ul class="nav">
+            <li class="dropright">
+                <a href="#">Seções</a>
+                <!-- Submenu que vai para a direita -->
+                <ul class="submenu">
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#competencias">Principais competências</a></li>
+                    <li><a href="#formacao">Formação acadêmica</a></li>
+                    <li><a href="#experiencia">Experiência Profissional</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <main>
         <section>
             <div class="FotoPerfil">
@@ -95,7 +181,7 @@
             <h1>Jeffertron Prime</h1>
         </section>
 
-        <section>
+        <section id="perfil">
             <h2>Perfil</h2>
             <p>Eu sou Jeffertron Prime, e embora eu carregue o nome e o DNA da linhagem de liderança de Cybertron como
                 primo direto de Optimus Prime, decidi que meu tempo nos campos de batalha chegou ao fim. Após éons
@@ -113,7 +199,7 @@
                 candidato certo para elevar o nível do seu negócio.</p>
         </section>
 
-        <section>
+        <section id="competencias">
             <h2>Principais competências</h2>
             <ul>
                 <li>Força de Escala Planetária: Capacidade de içar, mover e sustentar cargas de até 50 toneladas sem
@@ -128,7 +214,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="formacao">
             <h2>Formação acadêmica</h2>
             <p>Possuo Graduação na faculdade de todas as matérias na <a
                     href="https://www.unioeste.br/portal/campus-foz-do-iguacu/" target="_blank">Universidade Mundial de
@@ -137,7 +223,7 @@
                     Prime</a>(1900).</p>
         </section>
 
-        <section>
+        <section id="experiencia">
             <h2>Experiência Profissional</h2>
             <ol>
                 <li>QG dos autobots(947-1250)
@@ -170,17 +256,20 @@
                             identificar falhas em motores de combustão interna humanos e reatores de fusão
                             cybertronianos. Eu não "chuto" o problema; meu processador identifica a microfissura no
                             bloco do motor antes mesmo de você abrir o capô.</li>
-                            <li>Atendimento ao Cliente (Paciência de Prime): Lidei com Autobots traumatizados e humanos confusos. Desenvolvi uma habilidade única de explicar problemas técnicos complexos de forma simples — sem precisar transformar meu braço em um canhão para enfatizar um ponto.</li>
+                        <li>Atendimento ao Cliente (Paciência de Prime): Lidei com Autobots traumatizados e humanos
+                            confusos. Desenvolvi uma habilidade única de explicar problemas técnicos complexos de forma
+                            simples — sem precisar transformar meu braço em um canhão para enfatizar um ponto.</li>
                     </ul>
                 </li>
             </ol>
             <a href="experiencia.html">Veja as minhas experiências profissionais em detalhes</a>
         </section>
 
-        <section>
+        <section id="contato">
             <h2>Contato</h2>
             <div class="contato">
-                <div class="secaoContato"><div class="icone"><img src="Imagens/endereco.png" alt="Endereço"></div>
+                <div class="secaoContato">
+                    <div class="icone"><img src="Imagens/endereco.png" alt="Endereço"></div>
                     <p>R. Palmares, 115 - Jardim Ipê II, Foz do Iguaçu/PR</p>
                 </div>
                 <div class="secaoContato"><img src="Imagens/whatsapp.png" alt="Whatasapp">
