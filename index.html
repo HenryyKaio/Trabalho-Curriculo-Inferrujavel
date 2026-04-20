@@ -76,8 +76,14 @@
 
         .secaoContato {
             display: flex;
+            width: 70%;
             margin-left: 10px;
             margin-top: 20px;
+        }
+
+        .secaoContato a{
+            text-decoration: none;
+        
         }
 
         .secaoContato p {
@@ -88,6 +94,83 @@
             width: 32px;
             height: 32px;
         }
+
+        .map-pin {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            background-color: rgb(233, 52, 52);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            margin-top: 5px;
+        }
+
+        .secaoContato:hover .map-pin {
+            animation: animate 1s both;
+        }
+
+        .map-pin::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            margin: 8px 0px 0px 8px;
+            border-radius: 50%;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: translateY(-2000px) rotate(-45deg);
+                filter: alpha(opacity=0);
+
+            }
+
+            60% {
+                opacity: 1;
+                transform: translateY(30px) rotate(-45deg);
+                filter: none;
+
+            }
+
+            80% {
+                transform: translateY(-10px) rotate(-45deg);
+
+            }
+
+            100% {
+                transform: translateY(0px) rotate(-45deg);
+            }
+        }
+
+        .secaoContato:hover .whats {
+            animation: chacoalhar 0.3s ease-in-out 2;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes chacoalhar {
+            0% {
+                transform:  rotate(0deg);
+            }
+
+            25% {
+                transform:  rotate(15deg);
+            }
+
+            50% {
+                transform:  rotate(0deg);
+            }
+
+            75% {
+                transform:  rotate(-15deg);
+            }
+
+            100% {
+                transform:  rotate(0deg);
+            }
+        }
+
 
         .home {
             width: 45px;
@@ -111,14 +194,14 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            font-size:20px;
+            font-size: 20px;
         }
 
         .nav li {
             position: relative;
             /* Pai precisa ser relative */
             margin: 20px;
-            top:-20px;
+            top: -20px;
         }
 
         .nav a {
@@ -128,7 +211,8 @@
             text-decoration: none;
             transition: 0.5s;
         }
-        .dropright{
+
+        .dropright {
             display: block;
             padding: 15px;
             color: white;
@@ -136,8 +220,8 @@
             transition: 0.5s;
         }
 
-        .nav a:hover{
-            color:rgb(28, 13, 163);
+        .nav a:hover {
+            color: rgb(28, 13, 163);
         }
 
 
@@ -156,7 +240,7 @@
         }
 
         /* Mostrar submenu no hover */
-        .dropright:hover  .submenu {
+        .dropright:hover .submenu {
             opacity: 1;
             visibility: visible;
             display: flex;
@@ -281,10 +365,11 @@
             <h2>Contato</h2>
             <div class="contato">
                 <div class="secaoContato">
-                    <div class="icone"><img src="Imagens/endereco.png" alt="Endereço"></div>
-                    <p>R. Palmares, 115 - Jardim Ipê II, Foz do Iguaçu/PR</p>
+                    <div class="map-pin"></div>
+                    <p><a href="https://www.google.com/maps/place/Bosque+dos+Macacos/@-25.4803514,-54.5669977,17z/data=!3m1!4b1!4m6!3m5!1s0x94f69b6191b07121:0x8e1a5a1c89ee4c76!8m2!3d-25.4803563!4d-54.5644228!16s%2Fg%2F11ffj49py7?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">R. Palmares, 66-132 - Jardim Ipê II, Foz do Iguaçu - PR, 85869-637</a></p>
                 </div>
-                <div class="secaoContato"><img src="Imagens/whatsapp.png" alt="Whatasapp">
+                <div class="secaoContato">
+                    <div class="whats"><img src="Imagens/whatsapp.png" alt="Whatasapp"></div>
                     <p>(45) 99999-7888</p>
                 </div>
                 <div class="secaoContato"><img src="Imagens/email.png" alt="Email">
